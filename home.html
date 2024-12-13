@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Lorem ipsum">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Lorem Ipsum, Lorem Ipsum">
+        <meta name="author" content="Lorem Ipsum">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/png" href="img/favicon.png">
+        <title>Jake & Dana's Wedding</title>
+        <script>
+            const authorized = sessionStorage.getItem("authorized");
+            if (!authorized) {
+                window.location.href = "index.html";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="wrapper">
+
+                <!-- navigation -->
+                <nav class="navbar">
+                    <button class="menu-button" id="menuButton" onclick="toggleMenu()"></button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">The Wedding</a></li>
+                        <li><a href="hamptonbays.html">Hampton Bays</a></li>
+                        <li><a href="registry.html">Our Registry</a></li>
+                    </ul>
+                </nav>
+
+                <!-- content -->
+                <div class="content">
+                        <!-- intro -->
+                        <div class="text-block-01">
+                            <p>
+                                Save the date</br>
+                                to celebrate the wedding of</br>
+                                Jake & Dana</br>
+                            </p>
+                        </div>
+                        <!-- welcome drinks -->
+                        <div class="text-block-01">
+                            <p>
+                                Friday, September 5th</br>
+                                Welcome Drinks</br>
+                            </p>
+                        </div>
+                        <!-- ceremony -->
+                        <div class="text-block-01">
+                            <p>
+                                Saturday, September 6th</br>
+                                Ceremony & Reception</br>
+                            </p>
+                        </div>
+                        <!-- reception -->
+                        <div class="text-block-01">
+                            <p>
+                                Sunday, September 7th</br>
+                                Breakfast & Beach</br>
+                            </p>
+                        </div>
+                        <!-- location -->
+                        <div class="text-block-01">
+                            <p>
+                                Hampton Bays, NY 11946
+                            </p>
+                        </div>
+                        <!-- tbd -->
+                        <div class="text-block-01">
+                            <p>
+                                Formal invitation coming soon
+                            </p>
+                        </div>
+                </div>
+
+                <!-- footer -->
+                <footer class="footer">
+                    <p>©2024</p>
+                </footer>
+
+        </div>
+
+                <!-- script -->
+                <script>
+                    function toggleMenu() {
+                        const navLinks = document.getElementById('navLinks');
+                        const menuButton = document.getElementById('menuButton');
+                        navLinks.classList.toggle('show');
+                        menuButton.classList.toggle('active');
+                    }
+                </script>
+
+    </body>
+</html>
