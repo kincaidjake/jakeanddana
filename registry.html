@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Lorem ipsum">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Lorem Ipsum, Lorem Ipsum">
+        <meta name="author" content="Lorem Ipsum">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/png" href="img/favicon.png">
+        <title>Jake & Dana's Wedding</title>
+    </head>
+    <body>
+        <div class="wrapper">
+
+                <!-- navigation -->
+                <nav class="navbar">
+                    <button class="menu-button" id="menuButton" onclick="toggleMenu()"></button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">The Wedding</a></li>
+                        <li><a href="hamptonbays.html">Hampton Bays</a></li>
+                        <li><a href="registry.html">Our Registry</a></li>
+                    </ul>
+                </nav>
+                
+                <!-- content -->
+                <div class="content">
+                    <!-- intro -->
+                    <div class="text-block-01">
+                        <p>
+                            We just want to celebrate together, but if you are feeling extra generous, we have created a wedding registry.
+                        </p>
+                    </div>
+                    <div class="cta-block">
+                            <button type="button">Our Registry</button>
+                    </div>
+                </div>
+                
+                <!-- footer -->
+                <footer class="footer">
+                    <p>©2024</p>
+                </footer>
+
+        </div>
+
+                <!-- script -->
+                <script>
+                    function toggleMenu() {
+                        const navLinks = document.getElementById('navLinks');
+                        const menuButton = document.getElementById('menuButton');
+                        navLinks.classList.toggle('show');
+                        menuButton.classList.toggle('active');
+                    }
+                </script>
+
+    </body>
+</html>

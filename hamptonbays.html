@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Lorem ipsum">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="Lorem Ipsum, Lorem Ipsum">
+        <meta name="author" content="Lorem Ipsum">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./img/favicon.png" type="image/png" href="img/favicon.png">
+        <title>Jake & Dana's Wedding</title>
+    </head>
+    <body>
+        <div class="wrapper">
+
+                <!-- navigation -->
+                <nav class="navbar">
+                    <button class="menu-button" id="menuButton" onclick="toggleMenu()"></button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html">The Wedding</a></li>
+                        <li><a href="hamptonbays.html">Hampton Bays</a></li>
+                        <li><a href="registry.html">Our Registry</a></li>
+                    </ul>
+                </nav>
+
+                <!-- content -->
+                <div class="content">
+                    <!-- intro -->
+                    <div class="text-block-01">
+                        <p>
+                            We've reserved a block of rooms at the Canoe Palace in Hampton Bays. Just mention the Jake & Dana Wedding when you reserve.
+                        </p>
+                    </div>
+                    <div class="text-block-02">
+                        <p>
+                            Canoe Palace</br>
+                            123 Demo St.<br>
+                            Hampton Bays, NY 12345
+                        </p>
+                    </div>
+                    <div class="cta-block">
+                        <button type="button">Book Now</button>
+                    </div>
+                    <!-- other accommadations -->
+                    <div class="text-block-01">
+                        <p>Other Accommodations</p>
+                    </div>
+                    <div class="text-block-02">
+                        <ul class="suggested-links">
+                            <li><a href="#">4bd Airbnb House →</a></li>
+                            <li><a href="#">The Hampton Maid →</a></li>
+                            <li><a href="#">1bd Airbnb Apartment →</a></li>
+                        </ul>
+                    </div>
+                    <!-- places to go -->
+                    <div class="text-block-01">
+                        <p>Places to Go</p>
+                    </div>
+                    <div class="text-block-02">
+                        <ul class="suggested-links">
+                            <li><a href="#">Sip & Soda →</a></li>
+                            <li><a href="#">The Big Duck →</a></li>
+                            <li><a href="#">Taqueria Mi Pueblito →</a></li>
+                            <li><a href="#">Ponquogue Beach →</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <footer class="footer">
+                    <p>©2024</p>
+                </footer>
+
+        </div>
+
+                <!-- script -->
+                <script>
+                    function toggleMenu() {
+                        const navLinks = document.getElementById('navLinks');
+                        const menuButton = document.getElementById('menuButton');
+                        navLinks.classList.toggle('show');
+                        menuButton.classList.toggle('active');
+                    }
+                </script>
+
+    </body>
+</html>
