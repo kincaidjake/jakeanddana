@@ -11,79 +11,44 @@
         <title>Jake & Dana's Wedding</title>
     </head>
     <body>
-        <div class="wrapper">
+        <div class="wrapper-02">
 
-                <!-- navigation -->
-                <nav class="navbar">
-                    <button class="menu-button" id="menuButton" onclick="toggleMenu()"></button>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="index.html">The Wedding</a></li>
-                        <li><a href="hamptonbays.html">Hampton Bays</a></li>
-                        <li><a href="registry.html">Our Registry</a></li>
-                    </ul>
-                </nav>
-
-                <!-- content -->
-                <div class="content">
-                        <!-- intro -->
-                        <div class="text-block-01">
-                            <p>
-                                Save the date</br>
-                                to celebrate the wedding of</br>
-                                Jake & Dana</br>
-                            </p>
-                        </div>
-                        <!-- welcome drinks -->
-                        <div class="text-block-01">
-                            <p>
-                                Friday, September 5th</br>
-                                Welcome Drinks</br>
-                            </p>
-                        </div>
-                        <!-- ceremony -->
-                        <div class="text-block-01">
-                            <p>
-                                Saturday, September 6th</br>
-                                Ceremony & Reception</br>
-                            </p>
-                        </div>
-                        <!-- reception -->
-                        <div class="text-block-01">
-                            <p>
-                                Sunday, September 7th</br>
-                                Breakfast & Beach</br>
-                            </p>
-                        </div>
-                        <!-- location -->
-                        <div class="text-block-01">
-                            <p>
-                                Hampton Bays, NY 11946
-                            </p>
-                        </div>
-                        <!-- tbd -->
-                        <div class="text-block-01">
-                            <p>
-                                Formal invitation coming soon
-                            </p>
-                        </div>
-                </div>
-
-                <!-- footer -->
-                <footer class="footer">
-                    <p>©2024</p>
-                </footer>
+            <div class="password-container">
+                <form id="passwordForm">
+                    <input type="password" id="password" placeholder="Enter password" required/>
+                    <div class="cta-block">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
 
         </div>
 
-                <!-- script -->
-                <script>
-                    function toggleMenu() {
-                        const navLinks = document.getElementById('navLinks');
-                        const menuButton = document.getElementById('menuButton');
-                        navLinks.classList.toggle('show');
-                        menuButton.classList.toggle('active');
-                    }
-                </script>
+        <script>
+            document.getElementById("passwordForm").addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent the form from refreshing the page
+                
+                // Get entered password from the input field
+                const password = document.getElementById("password").value;
+    
+                // Generate a Base64 hash from the entered password
+                const hash = btoa(password);
+    
+                // Compare the hash with your pre-generated hash (replace this value)
+                const correctHash = "aGFtcHRvbmJheXMyMDI1";  // Replace with your Base64-encoded password
+    
+                if (hash === correctHash) {
+                    // Store login state in sessionStorage
+                    sessionStorage.setItem("authorized", "true");
+    
+                    // Redirect to the protected page
+                    window.location.href = "home.html";
+                } else {
+                    alert("Incorrect password. Please try again.");
+                    document.getElementById("password").value = "";  // Clear the password field
+                }
+            });
+        </script>
 
     </body>
 </html>
