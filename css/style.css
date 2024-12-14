@@ -247,7 +247,6 @@ button[type="button"]:hover {
     border-radius: 2px;  /* Rounded corners */
     cursor: pointer;  /* Pointer on hover */
     transition: all 0.24s ease;  /* Smooth transition */
-
 }
 
 .password-container button:hover {
@@ -267,11 +266,8 @@ button[type="button"]:hover {
 
 .centered-image {
 
-    
 }
 
+img {
 
-  
-  img {
-
-  }
+}
