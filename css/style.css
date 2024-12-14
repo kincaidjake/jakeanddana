@@ -111,7 +111,6 @@ ul.suggested-links {
 .suggested-links a {
     color: black;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .suggested-links a:hover {
@@ -134,6 +133,17 @@ p {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+    text-align: center;
+}
+
+h1 {
+    color: #000000;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: "Times New Roman", Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     text-transform: uppercase;
     text-align: center;
 }
@@ -148,7 +158,6 @@ button[type="button"] {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    text-transform: uppercase;
     text-align: center;
     border: 1px solid black;
     border-radius: 2px;  /* Rounded corners */
