@@ -256,3 +256,25 @@ button[type="button"]:hover {
     transition: all 0.24s ease;
 }
 
+/* random-image */
+#random-image-container {
+    display: flex; /* or grid */
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.centered-image {
+    width: 100%;
+    max-width: 1200px; /* Optional max width */
+    margin: 0 auto;
+    
+}
+
+
+  
+  img {
+    max-width: 80%;
+    height: auto;
+  }
