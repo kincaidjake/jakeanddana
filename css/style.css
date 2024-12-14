@@ -16,9 +16,11 @@ html, body {
 }
 
 .content {
-    flex: 1; /* This ensures the content area expands to fill available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    flex: 1; 
     margin: 16px;
-    
 }
 
 /* navbar styles */
@@ -91,6 +93,7 @@ html, body {
 
 .text-block-01 {
     padding-top: 24px;
+    max-width: 480px;
 }
 
 .text-block-02 {
