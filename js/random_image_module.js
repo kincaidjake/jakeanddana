@@ -1,8 +1,8 @@
 function getRandomImage() {
     const images = [
-        'img/random-image-module/image-01.png',
-        'img/random-image-module/image-02.png',
-        'img/random-image-module/image-03.png'
+        'img/image-01.png',
+        'img/image-02.png',
+        'img/image-03.png'
     ];
 
     const randomIndex = Math.floor(Math.random() * images.length);
