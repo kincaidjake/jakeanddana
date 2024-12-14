@@ -87,30 +87,6 @@ html, body {
     top: 14px;
 }
 
-@media (max-width: 768px) {
-
-    .menu-button {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 0px;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-    
-}
-
 /* main styles */
 
 .text-block-01 {
@@ -256,18 +232,46 @@ button[type="button"]:hover {
 }
 
 /* random-image */
+
+.responsive-image-container img {
+    width: 100%;
+    height: auto;
+    max-width: 600px; /* Adjust based on your design */
+    display: block;
+    margin: 0 auto;
+}
+
 #random-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 80px;
 }
 
-.centered-image {
+@media (max-width: 768px) {
 
-}
+    .menu-button {
+        display: block;
+    }
 
-img {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
 
+    .nav-links li {
+        text-align: center;
+        padding: 0px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    #random-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
 }
