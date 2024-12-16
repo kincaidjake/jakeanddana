@@ -255,6 +255,7 @@ button[type="button"]:hover {
 
 #random-image-container {
     margin: 80px;
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 @media (max-width: 768px) {
@@ -287,3 +288,6 @@ button[type="button"]:hover {
     }
     
 }
+
+
+
