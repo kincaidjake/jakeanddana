@@ -12,39 +12,47 @@
     </head>
     <body>
         <div class="wrapper-02">
-
             <div class="password-container">
                 <form id="passwordForm">
                     <input type="password" id="password" placeholder="Enter password" required/>
                     <div class="cta-block">
                         <button type="submit">Submit</button>
                     </div>
+                    <div id="errorMessage" class="error-message">Incorrect password. Please try again.</div>
                 </form>
             </div>
-
         </div>
 
         <script>
-            document.getElementById("passwordForm").addEventListener("submit", function(event) {
+            // Convert text to Uint8Array and hash with SHA-256
+            async function hashPassword(password) {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(password);
+
+                // Hash the password using SHA-256
+                const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+
+                // Convert hash to hexadecimal string
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+                return hashHex;
+            }
+
+            document.getElementById("passwordForm").addEventListener("submit", async function(event) {
                 event.preventDefault();  // Prevent the form from refreshing the page
-                
-                // Get entered password from the input field
+
                 const password = document.getElementById("password").value;
-    
-                // Generate a Base64 hash from the entered password
-                const hash = btoa(password);
-    
-                // Compare the hash with your pre-generated hash (replace this value)
-                const correctHash = "aGFtcHRvbmJheXMyMDI1";  // Replace with your Base64-encoded password
-    
+                const hash = await hashPassword(password);
+
+                // Use a SHA-256 hashed version of your password (replace this value)
+                const correctHash = "418c3609eaa7c80800c3ca4fcd96074021518e7ce7baea06fdeeeaf3ac373b50";  // Example hash for "password"
+
                 if (hash === correctHash) {
-                    // Store login state in sessionStorage
                     sessionStorage.setItem("authorized", "true");
-    
-                    // Redirect to the protected page
                     window.location.href = "home.html";
                 } else {
-                    alert("Incorrect password. Please try again.");
+                    const errorMessage = document.getElementById("errorMessage");
+                    errorMessage.style.display = "block";  // Show the error message
                     document.getElementById("password").value = "";  // Clear the password field
                 }
             });
