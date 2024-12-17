@@ -2,7 +2,18 @@ function getRandomImage() {
     const images = [
         { src: 'img/image-01.png', srcset: 'img/image-01@2x.png 2x' },
         { src: 'img/image-02.png', srcset: 'img/image-02@2x.png 2x' },
-        { src: 'img/image-03.png', srcset: 'img/image-03@2x.png 2x' }
+        { src: 'img/image-03.png', srcset: 'img/image-03@2x.png 2x' },
+        { src: 'img/image-04.png', srcset: 'img/image-04@2x.png 2x' },
+        { src: 'img/image-05.png', srcset: 'img/image-05@2x.png 2x' },
+        { src: 'img/image-06.png', srcset: 'img/image-06@2x.png 2x' },
+        { src: 'img/image-07.png', srcset: 'img/image-07@2x.png 2x' },
+        { src: 'img/image-08.png', srcset: 'img/image-08@2x.png 2x' },
+        { src: 'img/image-09.png', srcset: 'img/image-09@2x.png 2x' },
+        { src: 'img/image-10.png', srcset: 'img/image-10@2x.png 2x' },
+        { src: 'img/image-11.png', srcset: 'img/image-11@2x.png 2x' },
+        { src: 'img/image-12.png', srcset: 'img/image-12@2x.png 2x' },
+        { src: 'img/image-13.png', srcset: 'img/image-13@2x.png 2x' },
+        { src: 'img/image-14.png', srcset: 'img/image-14@2x.png 2x' }
     ];
 
     const randomIndex = Math.floor(Math.random() * images.length);
