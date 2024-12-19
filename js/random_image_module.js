@@ -21,7 +21,7 @@ function getRandomImage() {
 }
 
 function getRandomRotation() {
-    return Math.floor(Math.random() * 13) - 4;  // Random angle between -6 and +6 degrees
+    return Math.floor(Math.random() * 8) - 4;  // Random angle between -6 and +6 degrees
 }
 
 function displayRandomImage() {
