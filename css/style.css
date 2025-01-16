@@ -26,68 +26,24 @@ html, body {
 
 /* navbar styles */
 .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     color: black;
     margin-left: 16px;
     margin-right: 16px;
+    margin-top: 16px;
 }
 
-.nav-links {
-    display: flex;
-    /* justify-content: space-between; */
-    justify-content: center; /* Centers items horizontally */
-    gap: 40px; /* Adds 40px spacing between items */
-    list-style: none;
-    margin-top: 40px;
-}
-
-.nav-links a {
+.navbar a {
     color: black;
     text-decoration: none;
     text-transform: uppercase; 
 }
 
-.nav-links a:hover {
+.navbar a:hover {
     color: rgba(0, 0, 0, .48);
     transition: all 0.24s ease;
-}
-
-.menu-button {
-    display: none;
-    background: none;
-    border: none;
-    width: 100%;
-    height: 16px;
-    position: relative;
-    cursor: pointer;
-    margin-top: 8px;
-    margin-bottom: 8px;
-}
-
-.menu-button::before, .menu-button::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    /*  transition: all 0.16s ease-in; */ 
-}
-
-.menu-button::before {
-    top: 8px;
-}
-
-.menu-button::after {
-    top: 20px;
-}
-
-.menu-button.active::before {
-    top: 14px;
-}
-
-.menu-button.active::after {
-    top: 14px;
 }
 
 /* main styles */
@@ -246,6 +202,25 @@ button[type="button"]:hover {
 
 /* random-image */
 
+@media (max-width: 600px) {
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    #random-image-container {
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    
+}
+
 .responsive-image-container img {
     width: 100%;
     height: auto;
@@ -259,40 +234,12 @@ button[type="button"]:hover {
     cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
-@media (max-width: 768px) {
-
-    .menu-button {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        padding: 0;
-    }
-
-    .nav-links li {
-        text-align: center;
-        padding: 0px;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    #random-image-container {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    
-}
-
 .error-message {
     color: #B3251E;
     font-size: 16px;
     margin-top: 20px;
     display: none; /* Hidden by default */
 }
+
+
+
