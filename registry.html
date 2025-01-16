@@ -20,14 +20,11 @@
         <div class="wrapper">
 
                 <!-- navigation -->
-                <nav class="navbar">
-                    <button class="menu-button" id="menuButton" onclick="toggleMenu()"></button>
-                    <ul class="nav-links" id="navLinks">
-                        <li><a href="home.html">The Wedding</a></li>
-                        <li><a href="hamptonbays.html">Hampton Bays</a></li>
-                        <li><a href="registry.html">Our Registry</a></li>
-                    </ul>
-                </nav>
+                <div class="navbar">
+                    <a href="home.html">The Wedding</a>
+                    <a href="hamptonbays.html">Hampton Bays</a>
+                    <a href="registry.html">Our Registry</a>
+                </div>
                 
                 <!-- content -->
                 <div class="content">
@@ -44,26 +41,15 @@
                     <div id="random-image-container" class="responsive-image-container"></div>
                     
                 </div>
-
-
                 
                 <!-- footer -->
                 <footer class="footer">
                     <p>©2024</p>
                 </footer>
                 
-
         </div>
 
                 <!-- script -->
-                <script>
-                    function toggleMenu() {
-                        const navLinks = document.getElementById('navLinks');
-                        const menuButton = document.getElementById('menuButton');
-                        navLinks.classList.toggle('show');
-                        menuButton.classList.toggle('active');
-                    }
-                </script>
 
                 <script src="js/random_image_module.js"></script>              
 
