@@ -9,69 +9,80 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="shortcut icon" href="./img/favicon.png" type="image/png" href="img/favicon.png">
         <title>Jake & Dana's Wedding</title>
-        <script>
-            const authorized = sessionStorage.getItem("authorized");
-            if (!authorized) {
-                window.location.href = "index.html";
-            }
-        </script>
     </head>
     <body>
         <div class="wrapper">
 
                 <!-- navigation -->
-                <div class="navbar">
-                    <a href="home.html">The Wedding</a>
-                    <a href="hamptonbays.html">Hampton Bays</a>
-                    <a href="registry.html">Our Registry</a>
-                </div>
+                <nav class="navbar">
+                    <ul>
+                      <li class="nav-item">
+                        <a href="index.html">
+                          <img src="./img/thewedding.svg" alt="bird" class="icon" />
+                          The Wedding
+                        </a>
+                      </li>
+                      <li class="nav-item active">
+                        <a href="hamptonbays.html">
+                          <img src="./img/hamptonbays.svg" alt="bikini" class="icon" />
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="registry.html">
+                          <img src="./img/registry.svg" alt="martini" class="icon" />
+                          Our Registry
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
 
                 <!-- content -->
-                <div class="content">
+                <div class="container02">
+                <div class="container">
                     <!-- intro -->
-                    <div class="text-block-01">
-                        <p>
-                            We've reserved a block of rooms at the Canoe Palace in Hampton Bays. Just mention the Jake & Dana Wedding when you reserve.
-                        </p>
-                    </div>
-                    <div class="text-block-02">
+                    <div class="item-center" style="text-align: center;">
                         <h1>
+                            We've reserved a block of rooms at the Canoe Palace in Hampton Bays. Just mention the Jake & Dana Wedding when you reserve.
+                        </h1>
+                        <h1 style="margin-top: clamp(0.9rem, 0.5127rem + 1.6526vw, 2rem);">
                             Bay Watch Hotel & Marina
                         </h1>
-                        <p>
+                        <h1>
                             72 Foster Ave<br>
                             Hampton Bays, NY 11946
-                        </p>
+                        </h1>
+                        <div class="cta-block" style="margin-top: clamp(0.9rem, 0.5127rem + 1.6526vw, 2rem);">
+                            <a href="https://www.hamptonsbaywatch.com/">
+                                <button type="button">Book Now</button>
+                            </a>
+                        </div>
                     </div>
-                    <div class="cta-block">
-                        <a href="https://www.hamptonsbaywatch.com/">
-                            <button type="button">Book Now</button>
-                        </a>
-                    </div>
+                    
+
+
 
                     <!-- other accommadations -->
-                    <div class="text-block-01">
-                        <h1>Other Accommodations</h1>
-                    </div>
-                    <div class="text-block-02">
-                        <ul class="suggested-links">
-                            <li><a href="https://thedrakeinn.com/">The Drake Inn →</a></li>
-                            <li><a href="https://www.hamptonmaid.com/">The Hampton Maid →</a></li>
-                            <li><a href="https://canoeplace.com/">Canoe Place Inn →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/6676658?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=b5c15b5d-53cc-4fe6-963c-793beac7f141">1bd Apartment →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/642181364892026805?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=594eb72b-413a-44b8-a1e0-6a8eede1a11a">4bd House w/ pool →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/50872411?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=57af5e60-28ae-4b85-b543-7cdbf864e411">4br House →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/11333428?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=8f1af915-43ed-4706-b4bd-2719adedde97">1br Cottage →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/841967461512111610?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=7b5e3331-c00c-4e66-9295-dd9b5eda4f00">1br Apartment →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/25111146?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=c076a523-bd6c-4804-8ea3-53ff33e423d7">2br Apartment →</a></li>
-                            <li><a href="https://www.airbnb.com/rooms/50442935?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=5f91a669-b87c-4bf2-9e67-7a260c43f088">1br Guesthouse →</a></li>
-                        </ul>
-                    </div>
+                   
+                        <div class="item-center" style="text-align: center;">
+                            <h1>Other Accommodations</h1>
+                            <ul class="suggested-links">
+                                <li><a href="https://thedrakeinn.com/">The Drake Inn →</a></li>
+                                <li><a href="https://www.hamptonmaid.com/">The Hampton Maid →</a></li>
+                                <li><a href="https://canoeplace.com/">Canoe Place Inn →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/6676658?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=b5c15b5d-53cc-4fe6-963c-793beac7f141">1bd Apartment →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/642181364892026805?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=594eb72b-413a-44b8-a1e0-6a8eede1a11a">4bd House w/ pool →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/50872411?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=57af5e60-28ae-4b85-b543-7cdbf864e411">4br House →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/11333428?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=8f1af915-43ed-4706-b4bd-2719adedde97">1br Cottage →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/841967461512111610?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=7b5e3331-c00c-4e66-9295-dd9b5eda4f00">1br Apartment →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/25111146?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=c076a523-bd6c-4804-8ea3-53ff33e423d7">2br Apartment →</a></li>
+                                <li><a href="https://www.airbnb.com/rooms/50442935?check_in=2025-09-05&check_out=2025-09-07&guests=1&adults=1&s=67&unique_share_id=5f91a669-b87c-4bf2-9e67-7a260c43f088">1br Guesthouse →</a></li>
+                            </ul>
+                        </div>
+
+                
                     <!-- places to go -->
-                    <div class="text-block-01">
+                    <div class="item-center" style="text-align: center;">
                         <h1>Places to Go</h1>
-                    </div>
-                    <div class="text-block-02">
                         <ul class="suggested-links">
                             <li><a href="https://maps.app.goo.gl/1es5bkrUbrdprPfg7">The Big Duck →</a></li>
                             <li><a href="https://maps.app.goo.gl/zd76BSHV7pUnwHr9A">Ponquogue Beach →</a></li>
@@ -93,6 +104,8 @@
                             <li><a href="https://maps.app.goo.gl/Ufgfq37qGSE6WUDr9">Rumba →</a></li>
                         </ul>
                     </div>
+
+                </div>
                 </div>
 
                 <!-- footer -->
