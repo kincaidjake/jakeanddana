@@ -7,50 +7,117 @@
 
 html, body {
     height: 100%;
+    background-color: #F0EEE7;
 }
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
+    min-height:100vh; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-between;
+    row-gap: clamp(4rem, 3.2958rem + 3.0047vw, 6rem);
+    padding: clamp(0.5rem, -1.4366rem + 8.2629vw, 6rem);
+    
 }
 
-.content {
+.container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centers horizontally */
-    flex: 1; 
-    margin: 16px;
-    margin-bottom: 192px;
+    row-gap: clamp(3rem, 2.6479rem + 1.5023vw, 4rem);
+    /* max-width: 640px; */
+}
+
+.itemhorizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.itemcenter {
+    display: flex;
+    justify-content: center;
+}
+
+.itemcenter02 {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.item2 {
+    flex-grow: 1;
+}
+
+.itemright {
+    direction: rtl;
+}
+
+.itemleft {
+    direction: ltr;
 }
 
 /* navbar styles */
-.navbar {
+  
+  .navbar ul {
+    list-style: none;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    color: black;
-    margin-left: 16px;
-    margin-right: 16px;
-    margin-top: 16px;
-}
-
-.navbar a {
-    color: black;
+    justify-content: center;
+    gap: clamp(0.5rem, -0.7324rem + 5.2582vw, 4rem);
+    padding-bottom: clamp(0.5rem, 0.3239rem + 0.7512vw, 1rem);
+    border-bottom: 1px solid #E5DFD5;
+  }
+  
+  .nav-item {
+    position: relative;
+  }
+  
+  .nav-item a {
     text-decoration: none;
-    text-transform: uppercase; 
-}
+    font-size: clamp(0.9rem, 0.8120rem + 0.3756vw, 1.15rem);
+    text-transform: uppercase;
+    color: #EE4122;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item .icon {
+    display: none;
+    height: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+    margin-right: 0.5rem;
+  }
+  
+  .nav-item.active .icon {
+    display: inline-block;
+    fill: #EE4122;
+  }
+  
+  .nav-item.active a {
+    color: #EE4122;
+  }
+  
+  .nav-item:hover a {
+    color: #AD341E;
+  }
 
-.navbar a:hover {
-    color: rgba(0, 0, 0, .48);
-    transition: all 0.24s ease;
-}
+/* footer styles */
 
+.footer {
+    height: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: clamp(0.5rem, 0.3239rem + 0.7512vw, 1rem);
+    border-top: 1px solid #E5DFD5;
+}
+  
 /* main styles */
 
 .text-block-01 {
     padding-top: 24px;
     max-width: 480px;
+
 }
 
 .text-block-02 {
@@ -59,22 +126,25 @@ html, body {
 
 ul.suggested-links {
     list-style-type: none;
-    font-size: 16px;
-    line-height: 21px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.9rem, 0.6887rem + 0.9014vw, 1.5rem);
     font-family: "Times New Roman", Times, serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
+    text-transform: uppercase;
+    color: #EE4122;
 }
 
 .suggested-links a {
-    color: black;
+    color: #EE4122;
     text-decoration: none;
 }
 
 .suggested-links a:hover {
-    color: rgba(0, 0, 0, .48);
+    color: #AD341E;
     transition: all 0.24s ease;
 }
 
@@ -82,13 +152,12 @@ ul.suggested-links {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
 }
 
 p {
-    color: #000000;
-    font-size: 16px;
-    line-height: 21px;
+    font-size: clamp(0.9rem, 0.8120rem + 0.3756vw, 1.15rem);
+    text-transform: uppercase;
+    color: #EE4122;
     font-family: "Times New Roman", Times, serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -97,45 +166,58 @@ p {
 }
 
 h1 {
-    color: #000000;
-    font-size: 16px;
-    line-height: 21px;
+    color: #EE4122;
+    font-size: clamp(0.9rem, 0.6887rem + 0.9014vw, 1.5rem);
+    font-family: "Times New Roman", Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #EE4122;
+    font-size: clamp(0.9rem, 0.6887rem + 0.9014vw, 1.5rem);
+    font-family: "Times New Roman", Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #EE4122;
+    font-size: clamp(4rem, 1.8873rem + 9.0141vw, 10rem);
+    font-family: "Times New Roman", Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+button[type="button"] {
+    padding: 12px 24px;
+    background: none;
+    color: #EE4122;
+    font-size: clamp(0.9rem, 0.7768rem + 0.5258vw, 1.25rem);
     font-family: "Times New Roman", Times, serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
     text-align: center;
-}
-
-button[type="button"] {
-    padding: 12px 24px;
-    background: none;
-    color: #000000;
-    font-size: 16px;
-    line-height: 21px;
-    font-family: "Times New Roman", Times, serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-    border: 1px solid black;
+    border: 1px solid #EE4122;
     border-radius: 2px;  /* Rounded corners */
     cursor: pointer;  /* Pointer on hover */
     transition: all 0.24s ease;  /* Smooth transition */
+    
 }
 
 button[type="button"]:hover {
-    border: 1px solid rgba(0, 0, 0, .24);
-    color: rgba(0, 0, 0, .80);
+    border: 1px solid #AD341E;
+    color: #AD341E;
     transition: all 0.24s ease;
 }
 
-/* footer styles */
-.footer {
-    text-align: center;
-    margin: 16px;
-}
 
 /* password page */
 .wrapper-02 {
@@ -202,44 +284,9 @@ button[type="button"]:hover {
 
 /* random-image */
 
-@media (max-width: 600px) {
-
-    .navbar a {
-        font-size: 14px;
-    }
-
-}
-
-@media (max-width: 768px) {
-
-    #random-image-container {
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 40px;
-        margin-bottom: 40px;
-    }
-    
-}
-
-.responsive-image-container img {
-    width: 100%;
-    height: auto;
-    max-width: 600px; /* Adjust based on your design */
-    display: block;
-    margin: 0 auto;
-}
-
-#random-image-container {
-    margin: 80px;
-    cursor: pointer; /* Changes the cursor to a pointer on hover */
-}
-
 .error-message {
     color: #B3251E;
     font-size: 16px;
     margin-top: 20px;
     display: none; /* Hidden by default */
 }
-
-
-
