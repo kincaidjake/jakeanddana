@@ -9,36 +9,46 @@
         <link rel="stylesheet" href="./css/style.css">
         <link rel="shortcut icon" href="./img/favicon.png" type="image/png" href="img/favicon.png">
         <title>Jake & Dana's Wedding</title>
-        <script>
-            const authorized = sessionStorage.getItem("authorized");
-            if (!authorized) {
-                window.location.href = "index.html";
-            }
-        </script>
     </head>
     <body>
         <div class="wrapper">
 
                 <!-- navigation -->
-                <div class="navbar">
-                    <a href="home.html">The Wedding</a>
-                    <a href="hamptonbays.html">Hampton Bays</a>
-                    <a href="registry.html">Our Registry</a>
-                </div>
+                <nav class="navbar">
+                    <ul>
+                      <li class="nav-item">
+                        <a href="index.html">
+                          <img src="./img/thewedding.svg" alt="bird" class="icon" />
+                          The Wedding
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="hamptonbays.html">
+                          <img src="./img/hamptonbays.svg" alt="bikini" class="icon" />
+                          Hampton Bays
+                        </a>
+                      </li>
+                      <li class="nav-item active">
+                        <a href="registry.html">
+                          <img src="./img/registry.svg" alt="martini" class="icon" />
+                        </a>
+                      </li>
+                    </ul>
+                  </nav>
                 
                 <!-- content -->
-                <div class="content">
+                <div class="item-center" style="text-align: center;">
                     <!-- intro -->
-                    <div class="text-block-01">
                         <p>
                             We just want to celebrate together, but if you are feeling extra generous, we have created a wedding registry.
                         </p>
-                    </div>
-                    <div class="cta-block">
-                            <button type="button">Our Registry</button>
-                    </div>
+                        <div class="cta-block" style="margin-top: clamp(0.9rem, 0.5127rem + 1.6526vw, 2rem);">
+                            <a href="https://">
+                                <button type="button">Our Registry</button>
+                            </a>
+                        </div>
 
-                    <div id="random-image-container" class="responsive-image-container"></div>
+                        <img src="./img/image-12@2x.png" alt="Description of image" class="my-image" style="width: clamp(16rem, 5.7887rem + 43.5681vw, 45rem); margin-top: clamp(3rem, 1.9437rem + 4.5070vw, 6rem);">
                     
                 </div>
                 
@@ -49,9 +59,7 @@
                 
         </div>
 
-                <!-- script -->
-
-                <script src="js/random_image_module.js"></script>              
+                <!-- script -->         
 
     </body>
 </html>
