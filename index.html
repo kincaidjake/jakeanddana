@@ -11,52 +11,125 @@
         <title>Jake & Dana's Wedding</title>
     </head>
     <body>
-        <div class="wrapper-02">
-            <div class="password-container">
-                <form id="passwordForm">
-                    <input type="password" id="password" placeholder="Enter password" required/>
-                    <div class="cta-block">
-                        <button type="submit">Submit</button>
-                    </div>
-                    <div id="errorMessage" class="error-message">Incorrect password. Please try again.</div>
-                </form>
-            </div>
+        <div class="wrapper">
+
+            <!-- navigation -->
+            <nav class="navbar">
+                <ul>
+                  <li class="nav-item active">
+                    <a href="index.html">
+                      <img src="./img/thewedding.svg" alt="bird" class="icon" />
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="hamptonbays.html">
+                      <img src="./img/hamptonbays.svg" alt="bikini" class="icon" />
+                      Hampton Bays
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="registry.html">
+                      <img src="./img/registry.svg" alt="martini" class="icon" />
+                      Our Registry
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+
+                <!-- content -->
+                <div class="container02">
+                <div class="container">
+                        <!-- intro -->
+                        <div class="item">
+                            <div class="itemleft">
+                            <h1>
+                                Save the date to celebrate the wedding of
+                            </h1>
+                            </div>
+                            <div class="itemright">
+                            <h2>
+                                Jake Kincaid & Dana Famiglietti
+                            </h2>
+                            </div>
+                        </div>
+                        <!-- welcome drinks -->
+                        <div class="item">
+                            <h3>
+                                Save
+                            </h3>
+                        </div>
+                       <!-- welcome drinks -->
+                        <div class="item">
+                            <div class="itemright">
+                            <h1>
+                                Friday, September 5th
+                            </h1>
+                            <h2>
+                                Welcome Party
+                            </h2>
+                            </div>
+                        </div>
+                       <!-- welcome drinks -->
+                       <div class="itemhorizontal">
+                            <div class="itemleft">
+                                <h1>
+                                    Saturday, September 6th
+                                </h1>
+                                <h2>
+                                    Ceremony & Reception
+                                </h2>
+                            </div>
+                            <div class="item2">
+                                <div class="itemright">
+                                <h3>
+                                    the
+                                </h3>
+                                </div>
+                            </div>
+                        </div>
+                       <!-- welcome drinks -->
+                       <div class="item">
+                            <div class="itemright">
+                            <h1>
+                                Sunday, September 7th
+                            </h1>
+                            <h2>
+                                Breakfast & Beach
+                            </h2>
+                            </div>
+                        </div>
+                       <!-- welcome drinks -->
+                       <div class="itemcenter">
+                                <h3>
+                                    Date
+                                </h3>
+                        </div>
+                        <!-- welcome drinks -->
+                        <div class="itemhorizontal">
+                            <div class="item2">
+                            <h1>
+                                Hampton Bays, New York
+                            </h1>
+                            </div>
+                            <div class="item3">
+                            <h1>
+                                Invitation to come
+                            </h1>
+                            </div>
+                        </div>
+                </div>
+                </div>
+
+                <!-- footer -->
+                <footer class="footer">
+                    <p>
+                        ©2024
+                    </p>
+                </footer>
+
         </div>
 
-        <script>
-            // Convert text to Uint8Array and hash with SHA-256
-            async function hashPassword(password) {
-                const encoder = new TextEncoder();
-                const data = encoder.encode(password);
-
-                // Hash the password using SHA-256
-                const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-
-                // Convert hash to hexadecimal string
-                const hashArray = Array.from(new Uint8Array(hashBuffer));
-                const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-                return hashHex;
-            }
-
-            document.getElementById("passwordForm").addEventListener("submit", async function(event) {
-                event.preventDefault();  // Prevent the form from refreshing the page
-
-                const password = document.getElementById("password").value;
-                const hash = await hashPassword(password);
-
-                // Use a SHA-256 hashed version of your password (replace this value)
-                const correctHash = "418c3609eaa7c80800c3ca4fcd96074021518e7ce7baea06fdeeeaf3ac373b50";  // Example hash for "password"
-
-                if (hash === correctHash) {
-                    sessionStorage.setItem("authorized", "true");
-                    window.location.href = "home.html";
-                } else {
-                    const errorMessage = document.getElementById("errorMessage");
-                    errorMessage.style.display = "block";  // Show the error message
-                    document.getElementById("password").value = "";  // Clear the password field
-                }
-            });
-        </script>
+        <!-- script -->
 
     </body>
 </html>
