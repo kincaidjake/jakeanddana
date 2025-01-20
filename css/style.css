@@ -157,14 +157,16 @@ body {
 /* footer styles */
 
 .footer {
-    height: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
     width: 100%;
-    list-style: none;
+    padding-top: clamp(0.5rem, 0.3239rem + 0.7512vw, 1rem);
+    border-top: 1px solid #E5DFD5;
+}
+
+.item-13 {
+    height: clamp(2rem, 1.2958rem + 3.0047vw, 4rem);
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: clamp(0.5rem, 0.3239rem + 0.7512vw, 1rem);
-    border-top: 1px solid #E5DFD5;
 }
   
 /* main styles */
