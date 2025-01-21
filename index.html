@@ -53,8 +53,8 @@
         <div class="wrapper">
         <div class="container container-1">
             <div class="item item-1-1">
-                <p class="lowercase regular centered">Save the date to celebrate the wedding of</p>
-                <p class="uppercase bold centered">Jake Kincaid & Dana Famiglietti</p>
+                <p class="lowercase regular centered">Save the date to celebrate the&nbspwedding&nbspof</p>
+                <p class="uppercase bold centered">Jake&nbspKincaid & Dana&nbspFamiglietti</p>
             </div>
             <div class="item item-1-2">
                 <h2 class="centered">
@@ -64,7 +64,7 @@
             <div class="item item-1-3">
                 <div class="item item-1-2-1">
                     <h1 class="lowercase regular centered">
-                        Friday, September 5th
+                        Friday, September&nbsp5th
                     </h1>
                     <h1 class="uppercase bold centered">
                         Welcome Drinks
@@ -72,7 +72,7 @@
                 </div>
                 <div class="item item-1-2-2">
                     <h1 class="lowercase regular centered">
-                        Saturday, September 6th
+                        Saturday, September&nbsp6th
                     </h1>
                     <h1 class="uppercase bold centered">
                         Ceremony & Reception
@@ -87,7 +87,7 @@
             <div class="item item-1-5">
                 <div class="item item-1-2-1">
                     <h1 class="lowercase regular centered">
-                        Sunday, September 7th
+                        Sunday, September&nbsp7th
                     </h1>
                     <h1 class="uppercase bold centered">
                         Bagels & Beach
@@ -128,6 +128,7 @@
                 const svgLogo = document.getElementById('logo-svg');
                 const hamburger = document.querySelector('.hamburger');
                 const navbar = document.querySelector('.navbar');
+                const body = document.body;
     
                 // SVG options
                 const svgLogos = {
@@ -192,6 +193,10 @@
     
                 // Attach the toggleMenu function to the hamburger icon
                 hamburger.addEventListener('click', toggleMenu);
+
+                hamburger.addEventListener('click', () => {
+  body.classList.toggle('menu-open');
+});
             });
         </script>
     
