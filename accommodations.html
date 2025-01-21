@@ -134,9 +134,8 @@
                 const menu = document.getElementById('menu');
                 const svgLogo = document.getElementById('logo-svg');
                 const hamburger = document.querySelector('.hamburger');
-                const header = document.getElementById('header');
                 const navbar = document.querySelector('.navbar');
-
+    
                 // SVG options
                 const svgLogos = {
                     defaultRed: `
@@ -173,34 +172,33 @@
                     </svg>
                     `
                 };
-
+    
                 // Update logo function
                 const updateLogo = (logoType) => {
                     logoContainer.innerHTML = svgLogos[logoType];
                 };
-
+    
                 // Hover events for menu items
                 document.querySelector('.item-thewedding').addEventListener('mouseover', () => updateLogo('wedding'));
                 document.querySelector('.item-accommodations').addEventListener('mouseover', () => updateLogo('accommodations'));
                 document.querySelector('.item-ourregistry').addEventListener('mouseover', () => updateLogo('registry'));
-
+    
                 // Reset logo to white on menu leave
                 menu.addEventListener('mouseleave', () => updateLogo('defaultWhite'));
-
+    
                 // Toggle menu functionality
                 function toggleMenu() {
                     menu.classList.toggle('active');
                     hamburger.classList.toggle('active');
-                    header.classList.toggle('active');
                     navbar.classList.toggle('menu-active'); // Change navbar background
-
+    
                     if (menu.classList.contains('active')) {
                         updateLogo('defaultWhite');
                     } else {
                         updateLogo('defaultRed');
                     }
                 }
-
+    
                 // Attach the toggleMenu function to the hamburger icon
                 hamburger.addEventListener('click', toggleMenu);
             });
