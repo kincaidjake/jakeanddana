@@ -389,7 +389,7 @@ body.menu-open {
 .item-13 {
     display: flex;
     justify-content: center;
-    align-items: center;
+    column-gap: clamp(0.5rem, 0.3239rem + 0.7512vw, 1rem);
 }
 
 /* main styles */
