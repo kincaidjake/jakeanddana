@@ -24,10 +24,6 @@
                         <div></div>
                     </div>
                 </div>
-                <div class="header" id="header">
-                    <p class="lowercase regular centered">Save the date to celebrate the wedding of</h5>
-                    <p class="uppercase bold centered">Jake Kincaid & Dana Famiglietti</h5>
-                </div>
 
                 <div class="logo" id="logo-container">
                     <svg id="logo-svg" height="32" viewBox="0 0 54 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,11 +53,15 @@
         <div class="wrapper">
         <div class="container container-1">
             <div class="item item-1-1">
+                <p class="lowercase regular centered">Save the date to celebrate the wedding of</p>
+                <p class="uppercase bold centered">Jake Kincaid & Dana Famiglietti</p>
+            </div>
+            <div class="item item-1-2">
                 <h2 class="centered">
                     Dana
                 </h2>
             </div>
-            <div class="item item-1-2">
+            <div class="item item-1-3">
                 <div class="item item-1-2-1">
                     <h1 class="lowercase regular centered">
                         Friday, September 5th
@@ -79,12 +79,12 @@
                     </h1>
                 </div>
             </div>
-            <div class="item item-1-3">
+            <div class="item item-1-4">
                 <h2 class="centered">
                     +
                 </h2>
             </div>
-            <div class="item item-1-4">
+            <div class="item item-1-5">
                 <div class="item item-1-2-1">
                     <h1 class="lowercase regular centered">
                         Sunday, September 7th
@@ -102,7 +102,7 @@
                     </h1>
                 </div>
             </div>
-            <div class="item item-1-5">
+            <div class="item item-1-6">
                 <h2 class="centered">
                     Jake
                 </h2>
@@ -129,6 +129,7 @@
                 const hamburger = document.querySelector('.hamburger');
                 const header = document.getElementById('header');
                 const navbar = document.querySelector('.navbar');
+                let lastScrollPosition = 0;
 
                 // SVG options
                 const svgLogos = {
@@ -194,9 +195,23 @@
 
                 // Attach the toggleMenu function to the hamburger icon
                 hamburger.addEventListener('click', toggleMenu);
+                
+                // Handle header visibility on scroll
+                window.addEventListener('scroll', () => {
+                    const currentScrollPosition = window.scrollY;
+
+                    if (currentScrollPosition > lastScrollPosition) {
+                        // Scrolling down
+                        header.style.opacity = '0';
+                    } else {
+                        // Scrolling up
+                        header.style.opacity = '1';
+                    }
+
+                    lastScrollPosition = currentScrollPosition;
+                });
             });
         </script>
 
-        
     </body>
 </html>
