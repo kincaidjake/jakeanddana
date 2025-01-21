@@ -45,14 +45,14 @@ body.menu-open {
 .container-2 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
-    padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
+    padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
 
 }
 
 .container-3 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
+    padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
 }
 
 .item {
@@ -238,7 +238,7 @@ body.menu-open {
     .container-1 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(6, auto);
-        padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
+        padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
     }
 
     .navbar-content {
@@ -336,7 +336,7 @@ body.menu-open {
     padding-left: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
     padding-right: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
     padding-bottom: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
-    padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
+    padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
 }
 
 .item-thewedding {
