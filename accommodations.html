@@ -135,6 +135,7 @@
                 const svgLogo = document.getElementById('logo-svg');
                 const hamburger = document.querySelector('.hamburger');
                 const navbar = document.querySelector('.navbar');
+                const body = document.body;
     
                 // SVG options
                 const svgLogos = {
@@ -201,6 +202,10 @@
     
                 // Attach the toggleMenu function to the hamburger icon
                 hamburger.addEventListener('click', toggleMenu);
+                
+                hamburger.addEventListener('click', () => {
+                body.classList.toggle('menu-open');
+                });
             });
         </script>
 
