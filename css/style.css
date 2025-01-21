@@ -375,8 +375,13 @@ body.menu-open {
     transition: color 0.3s;
 }
 
-.menu a:hover {
-    color: #f39c12;
+
+a {
+    color: #EE4122;
+}
+
+a:hover {
+    color: #AD341E;
 }
 
 /* footer styles */
