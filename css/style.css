@@ -24,6 +24,9 @@ body {
     display: grid;
     width: 100%;
     row-gap: clamp(2rem, 0.5915rem + 6.0094vw, 6rem);
+    padding-left: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
+    padding-right: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
+    padding-bottom: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
 }
 
 .container-1 {
@@ -36,18 +39,13 @@ body {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
-    padding-left: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
-    padding-right: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
-    padding-bottom: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
+
 }
 
 .container-3 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
-    padding-left: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
-    padding-right: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
-    padding-bottom: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
 }
 
 .item {
@@ -258,9 +256,9 @@ body {
     opacity: 0; /* Start fully transparent */
     visibility: hidden; /* Make it non-interactable when hidden */
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    padding-left: clamp(0.5rem, -1.4366rem + 8.2629vw, 6rem);
-    padding-right: clamp(0.5rem, -1.4366rem + 8.2629vw, 6rem);
-    padding-bottom: clamp(0.5rem, -1.4366rem + 8.2629vw, 6rem);
+    padding-left: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
+    padding-right: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
+    padding-bottom: clamp(0.8rem, -1.0310rem + 7.8122vw, 6rem);
     padding-top: clamp(6rem, 2.4789rem + 15.0235vw, 16rem);
 }
 
