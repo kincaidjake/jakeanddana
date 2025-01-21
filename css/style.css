@@ -12,14 +12,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    overflow-x: hidden;
     background-color: #F0EEE7;
     transition: background-color 0.3s ease;
 }
 
 body.menu-open {
     background-color: #ee4122;
-    overflow: hidden; /* Prevent scrolling when the menu is open */
   }
 
 .wrapper {
