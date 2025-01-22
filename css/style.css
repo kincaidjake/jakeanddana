@@ -1,4 +1,12 @@
 /* base */
+:root {
+    --background-color: #F0EEE7; /* Replace with your original color */
+    --primary-color: #ee4122; /* Replace with your original color */
+    --primary-color-hover: #AD341E; /* Replace with your original color */
+    --secondary-color: #4C8B4B; /* Replace with your desired color */
+    --secondary-color-hover: #316231; /* Replace with your desired color */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +20,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     margin: 0;
-    background-color: #F0EEE7;
+    background-color: var(--background-color);
     transition: background-color 0.3s ease;
 }
 
 body.menu-open {
-    background-color: #ee4122;
+    background-color: var(--primary-color);
   }
 
 .wrapper {
@@ -154,7 +162,7 @@ body.menu-open {
     justify-content: space-between;
     align-items: center;
     padding: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
-/*  background-color: #F0EEE7; */ 
+/*  background-color: var(--background-color); */ 
 }
 
   
@@ -184,12 +192,12 @@ body.menu-open {
 }
 
 .navbar .logo svg {
-    fill: #ee4122; /* Default red color */
+    fill: var(--primary-color); /* Default red color */
     transition: fill 0.3s ease-in-out;
 }
 
 .navbar .logo svg.active {
-    fill: #F0EEE7; /* White color when active */
+    fill: var(--background-color); /* White color when active */
 }
 
 .hamburger {
@@ -204,22 +212,22 @@ body.menu-open {
 .hamburger div {
     width: 24px;
     height: 2px;
-    background-color: #EE4122;
+    background-color: var(--primary-color);
     margin: 4px 0;
     transition: 0.3s;
 }
 
 .hamburger:hover div {
-    background-color: #AD341E; /* Change color on hover */
+    background-color: var(--primary-color-hover); /* Change color on hover */
 }
 
 .hamburger.active div {
-    background-color: #F0EEE7;
+    background-color: var(--background-color);
 }
 
 .navbar .header {
     text-align: center;
-    color: #EE4122;
+    color: var(--primary-color);
     transition: color 0.3s, opacity 0.3s;
     flex-grow: 1; /* Allows the header to take up remaining space */
     text-align: center; /* Center the text */
@@ -231,7 +239,7 @@ body.menu-open {
 }
 
 .navbar .header.active {
-    color: #F0EEE7;
+    color: var(--background-color);
 }
 
 #header {
@@ -331,7 +339,7 @@ body.menu-open {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: #EE4122;
+    background-color: var(--primary-color);
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -375,7 +383,7 @@ body.menu-open {
 }
 
 .menu a {
-    color: #F0EEE7;
+    color: var(--background-color);
     text-decoration: none;
     font-size: 2rem;
     margin: 1rem 0;
@@ -384,11 +392,11 @@ body.menu-open {
 
 
 a {
-    color: #EE4122;
+    color: var(--primary-color);
 }
 
 a:hover {
-    color: #AD341E;
+    color: var(--primary-color-hover);
 }
 
 /* footer styles */
@@ -418,16 +426,16 @@ ul.suggested-links {
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    color: #EE4122;
+    color: var(--primary-color);
 }
 
 .suggested-links a {
-    color: #EE4122;
+    color: var(--primary-color);
     text-decoration: none;
 }
 
 .suggested-links a:hover {
-    color: #AD341E;
+    color: var(--primary-color-hover);
     transition: all 0.24s ease;
 }
 
@@ -439,7 +447,7 @@ ul.suggested-links {
 
 p {
     font-size: clamp(0.9rem, 0.8120rem + 0.3756vw, 1.15rem);
-    color: #EE4122;
+    color: var(--primary-color);
     font-family: "Geist Mono", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -448,7 +456,7 @@ p {
 }
 
 h1 {
-    color: #EE4122;
+    color: var(--primary-color);
     font-size: clamp(0.9rem, 0.6887rem + 0.9014vw, 1.5rem);
     line-height: 1.4;
     font-family: "Geist Mono", serif;
@@ -457,7 +465,7 @@ h1 {
 }
 
 h2 {
-    color: #EE4122;
+    color: var(--primary-color);
     font-size: clamp(4rem, 2.5915rem + 6.0094vw, 8rem);
     font-family: "Pinyon Script", serif;
     font-optical-sizing: auto;
@@ -501,13 +509,13 @@ h2 {
 }
 
 .whitetext {
-    color: #F0EEE7;
+    color: var(--background-color);
 }
 
 button[type="button"] {
     padding: 12px 24px;
     background: none;
-    color: #EE4122;
+    color: var(--primary-color);
     font-size: clamp(0.9rem, 0.8120rem + 0.3756vw, 1.15rem);
     font-family: "Geist Mono", serif;
     font-optical-sizing: auto;
@@ -515,7 +523,7 @@ button[type="button"] {
     font-style: normal;
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid #EE4122;
+    border: 1px solid var(--primary-color);
     border-radius: 2px;  /* Rounded corners */
     cursor: pointer;  /* Pointer on hover */
     transition: all 0.24s ease;  /* Smooth transition */
@@ -523,8 +531,8 @@ button[type="button"] {
 }
 
 button[type="button"]:hover {
-    border: 1px solid #AD341E;
-    color: #AD341E;
+    border: 1px solid var(--primary-color-hover);
+    color: var(--primary-color-hover);
     transition: all 0.24s ease;
 }
 
