@@ -425,7 +425,7 @@ a:hover {
 .item-13 {
     display: flex;
     justify-content: center;
-    column-gap: clamp(0.25rem, 0.0739rem + 0.7512vw, 0.75rem);
+    column-gap: clamp(0.75rem, 0.5739rem + 0.7512vw, 1.25rem);
 }
 
 /* main styles */
