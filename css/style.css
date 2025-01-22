@@ -477,6 +477,7 @@ h2 {
     color: var(--primary-color);
     font-size: clamp(4rem, 2.5915rem + 6.0094vw, 8rem);
     font-style: normal;
+    font-family: "business-blooming", serif;
 }
 
 .lowercase {
