@@ -463,8 +463,6 @@ p {
     color: var(--primary-color);
     font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
     line-height: 1.4;
-    font-family: "yorick-regular", serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
@@ -472,17 +470,12 @@ h1 {
     color: var(--primary-color);
     font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
     line-height: 1.4;
-    font-family: "yorick-regular", serif;
-    font-optical-sizing: auto;
     font-style: normal;
 }
 
 h2 {
     color: var(--primary-color);
     font-size: clamp(4rem, 2.5915rem + 6.0094vw, 8rem);
-    font-family: "business-blooming", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
     font-style: normal;
 }
 
