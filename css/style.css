@@ -503,6 +503,13 @@ h2 {
     text-shadow: -.15px -.15px 0 var(--primary-color), .15px -.15px 0 var(--primary-color), -.15px .15px 0 var(--primary-color), .15px .15px 0 var(--primary-color);
 }
 
+.script-white {
+    font-family: "business-blooming", serif;
+    line-height: 0;
+    text-shadow: -.15px -.15px 0 var(--background-color), .15px -.15px 0 var(--background-color), -.15px .15px 0 var(--background-color), .15px .15px 0 var(--background-color);
+    color: var(--background-color);
+}
+
 
 .centered {
     text-align: center
