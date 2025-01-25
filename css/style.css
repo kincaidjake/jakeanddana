@@ -542,6 +542,10 @@ h2 {
     top: -0.2em; /* Move the 'h' higher than the 't' */
   }
 
+  .no-break {
+    white-space: nowrap; /* Prevent breaking inside this container */
+  }
+
 button[type="button"] {
     padding: 12px 24px;
     background: none;
