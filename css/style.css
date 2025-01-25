@@ -172,7 +172,7 @@ body.menu-open {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000; /* Ensure it stays on top of other content */
+    z-index: 2000; /* Ensure it stays on top of other content */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -367,6 +367,7 @@ body.menu-open {
     padding-right: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
     padding-bottom: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
     padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
+    z-index: 1000;
 }
 
 .item-thewedding {
@@ -573,3 +574,20 @@ button[type="button"]:hover {
     width: clamp(16rem, 9.3099rem + 28.5446vw, 35rem);
     transition: transform 0.3s ease; /* Optional smooth animation */
 }
+
+    /* Initial state: hidden and transparent */
+    .fade-in {
+        opacity: 0; /* Completely transparent */
+        animation: fadeIn .4s ease-in forwards; /* Trigger animation */
+        z-index: -5;
+      }
+  
+      /* Keyframes for the fade-in effect */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
