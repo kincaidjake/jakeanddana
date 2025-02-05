@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'business-blooming'; /* The name of the font */
-    src: url('../fonts/Business Blooming Trial Trial.otf') format('opentype'); /* Path to the font file */
+    src: url('../fonts/Business-Blooming.ttf') format('truetype'); /* Path to the font file */
 }
 
 @font-face {
     font-family: 'yorick-bold'; /* The name of the font */
-    src: url('../fonts/YorickTrial-Bold.otf') format('opentype'); /* Path to the font file */
+    src: url('../fonts/Yorick-Bold-205TF.otf') format('opentype'); /* Path to the font file */
 }
 
 @font-face {
     font-family: 'yorick-regular'; /* The name of the font */
-    src: url('../fonts/YorickTrial-Regular.otf') format('opentype'); /* Path to the font file */
+    src: url('../fonts/Yorick-Regular-205TF.otf') format('opentype'); /* Path to the font file */
 }
 
 :root {
@@ -149,7 +149,7 @@ body.menu-open {
 .item-3-1 {
     grid-row: 1 / 1;
     grid-column: 1 / 3;
-    max-width: 880px;
+    max-width: 1040px;
     justify-self: center;
 }
 
@@ -437,7 +437,8 @@ ul.suggested-links {
     display: flex;
     flex-direction: column;
     font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
-    line-height: 1.4;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
     font-family: "yorick-regular", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -464,15 +465,16 @@ ul.suggested-links {
 p {
     color: var(--primary-color);
     font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
-    line-height: 1.4;
+    line-height: 1.5;
     font-style: normal;
 }
 
 h1 {
     color: var(--primary-color);
     font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
-    line-height: 1.4;
+    line-height: 1.5;
     font-style: normal;
+    
 }
 
 h2 {
@@ -480,6 +482,7 @@ h2 {
     font-size: clamp(4rem, 2.5915rem + 6.0094vw, 8rem);
     font-style: normal;
     font-family: "business-blooming", serif;
+    font-variation-settings: "opsz" 50;
 }
 
 .lowercase {
@@ -492,22 +495,24 @@ h2 {
 
 .regular {
     font-family: "yorick-regular", serif;
+    letter-spacing: -0.02em;
 }
 
 .bold {
     font-family: "yorick-bold", serif;
+    letter-spacing: -0.02em;
 }
 
 .script {
     font-family: "business-blooming", serif;
     line-height: 0;
-    text-shadow: -.15px -.15px 0 var(--primary-color), .15px -.15px 0 var(--primary-color), -.15px .15px 0 var(--primary-color), .15px .15px 0 var(--primary-color);
+    font-variation-settings: "opsz" 14;
 }
 
 .script-white {
     font-family: "business-blooming", serif;
     line-height: 0;
-    text-shadow: -.15px -.15px 0 var(--background-color), .15px -.15px 0 var(--background-color), -.15px .15px 0 var(--background-color), .15px .15px 0 var(--background-color);
+    font-variation-settings: "opsz" 14;
     color: var(--background-color);
 }
 
@@ -579,6 +584,7 @@ button[type="button"]:hover {
     .fade-in {
         opacity: 0; /* Completely transparent */
         animation: fadeIn .4s ease-in forwards; /* Trigger animation */
+        z-index: -5;
       }
   
       /* Keyframes for the fade-in effect */
