@@ -441,15 +441,32 @@ ul.suggested-links {
     color: var(--primary-color);
 }
 
+
+
+
 .suggested-links a {
     color: var(--primary-color);
     text-decoration: none;
+    display: inline-flex;
+    align-items: baseline;
 }
 
 .suggested-links a:hover {
     color: var(--primary-color-hover);
     transition: all 0.24s ease;
 }
+
+.suggested-links .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-left: clamp(0.5rem, 0.3944rem + 0.4507vw, 0.8rem); /* Ensures a slight space between text and arrow */
+}
+
+.suggested-links a:hover .arrow {
+    transform: translateX(clamp(0.25rem, 0.1972rem + 0.2254vw, 0.4rem)); /* Moves only the arrow */
+}
+
+
 
 .cta-block {
     display: flex;
