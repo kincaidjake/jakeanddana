@@ -453,7 +453,7 @@ ul.suggested-links {
 
 .suggested-links a:hover {
     color: var(--primary-color-hover);
-    transition: all 0.24s ease;
+    transition: all 0.3s ease;
 }
 
 .suggested-links .arrow {
@@ -577,15 +577,26 @@ button[type="button"] {
     border: 1px solid var(--primary-color);
     border-radius: 2px;  /* Rounded corners */
     cursor: pointer;  /* Pointer on hover */
-    transition: all 0.24s ease;  /* Smooth transition */
+    transition: all 0.3s ease;  /* Smooth transition */
     
 }
 
 button[type="button"]:hover {
     border: 1px solid var(--primary-color-hover);
     color: var(--primary-color-hover);
-    transition: all 0.24s ease;
+    transition: all 0.3s ease;
 }
+
+
+button .arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+button[type="button"]:hover .arrow {
+    transform: translateX(clamp(0.25rem, 0.1972rem + 0.2254vw, 0.4rem)); /* Moves only the arrow */
+}
+
 
 .my-image {
     width: clamp(16rem, 9.3099rem + 28.5446vw, 35rem);
