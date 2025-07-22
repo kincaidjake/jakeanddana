@@ -276,6 +276,20 @@ body.menu-open {
 /*  background-color: var(--background-color); */ 
 }
 
+.navbartwo {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 2000; /* Ensure it stays on top of other content */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
+    padding-left: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
+    padding-right: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
+/*  background-color: var(--background-color); */ 
+}
+
   
 /* .navbar.menu-active { */
 /* background-color: #ee4122; Change the background color to red */
