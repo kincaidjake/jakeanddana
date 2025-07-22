@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="Save the date to celebrate the wedding of Jake Kincaid & Dana Famiglietti">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Jake Kincaid & Dana Famiglietti">
+        <meta property="og:title" content="Jake Kincaid & Dana Famiglietti">
+        <meta property="og:description" content="Save the date to celebrate our wedding!">
+        <meta property="og:image" content="./img/og-image.png">
+        <meta property="og:url" content="https://jakeanddana.info/rsvp">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="shortcut icon" href="./img/favicon.svg" type="image/svg" href="img/favicon.svg">
+        <title>RSVP</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Pinyon+Script&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+                
+                <!-- content -->
+                <div class="wrapper ">
+                <div class="container-4 fade-in">
+
+<form @jake_kincaid_
+  action="https://formspree.io/f/mjkrdvno"
+  method="POST" 
+  id="rsvp-form"
+>
+  <h3 style="margin-top: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);">Rsvp</h3>
+
+  <!-- Hidden redirect to Thank You page -->
+  <input 
+    type="hidden" 
+    name="_redirect" 
+    value="https://jakeanddana.info"
+  >
+
+  <!-- Guest Names -->
+   <div class="form-section name-section">
+  <label class="uppercase bold centered" for="names">Name(s):<span aria-hidden="true">*</span></label><br>
+  <input 
+    type="text" 
+    id="names" 
+    name="names" 
+    required
+  >
+  </div>
+
+  
+  <!-- Attendance Section -->
+   <div class="form-section attendance-section">
+  <fieldset>
+    <legend class="uppercase bold">Attendance:</legend>
+
+  <!-- Welcome Party -->
+  <div class="radio-group" style="margin-top: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);">
+    <p><strong class="lowercase regular">Welcome Party<span aria-hidden="true">*</span></strong></p>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="welcome_party" value="Attending" required>
+      <span>Attending</span>
+    </label>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="welcome_party" value="Declines">
+      <span>Declines</span>
+    </label>
+  </div>
+
+  <!-- Ceremony & Reception -->
+  <div class="radio-group" style="margin-top: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);">
+    <p><strong class="lowercase regular">Ceremony & Reception<span aria-hidden="true">*</span></strong></p>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="ceremony_and_reception" value="Attending" required>
+      <span>Attending</span>
+    </label>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="ceremony_and_reception" value="Declines">
+      <span>Declines</span>
+    </label>
+  </div>
+
+  <!-- Bagels & Beach -->
+  <div class="radio-group" style="margin-top: clamp(0.75rem, 0.4859rem + 1.1268vw, 1.5rem);">
+    <p><strong class="lowercase regular">Bagels & Beach<span aria-hidden="true">*</span></strong></p>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="bagels_and_beach" value="Attending" required>
+      <span>Attending</span>
+    </label>
+    <label class="custom-radio uppercase regular">
+      <input type="radio" name="bagels_and_beach" value="Declines">
+      <span>Declines</span>
+    </label>
+  </div>
+
+ </fieldset>
+ </div>
+
+  <!-- Dietary Restrictions -->
+   <div class="form-section dietary-section">
+  <label for="dietary_restrictions" class="uppercase bold centered">Dietary Restrictions:</label><br>
+  <textarea 
+    id="dietary_restrictions" 
+    name="dietary_restrictions" 
+    rows="4" 
+    placeholder="Please specify if any"
+  ></textarea>
+  </div>
+
+
+  <button type="submit" id="submit-button" style="margin-top: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);">Submit RSVP <span class="arrow">→</span></button>
+
+  <!-- Inline message -->
+  <p id="form-message" role="alert"></p>
+</form>
+
+
+
+
+
+
+
+
+
+                </div>
+                </div>
+
+
+                
+        <!-- footer -->
+        <footer class="footer fade-in">
+          <div class="item-13">
+            <p class="centered">
+                <span class="script" style="font-size: clamp(1rem, 0.9120rem + 0.3756vw, 1.25rem);">with love </span>
+                <span class="regular">©2025</span>
+            </p>
+          </div>
+      </footer>
+
+      <script>
+document.getElementById('rsvp-form').addEventListener('submit', function (e) {
+  e.preventDefault(); // prevent default form submit
+  const form = e.target;
+
+  fetch(form.action, {
+    method: form.method,
+    body: new FormData(form),
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      window.location.href = 'thankyou.html';
+    } else {
+      document.getElementById('form-message').textContent =
+        'There was an error submitting your RSVP. Please try again.';
+    }
+  }).catch(error => {
+    document.getElementById('form-message').textContent =
+      'There was an error submitting your RSVP. Please try again.';
+  });
+});
+</script>
+
+
+
+
+
+
+    </body>
+</html>
