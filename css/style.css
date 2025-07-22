@@ -61,6 +61,7 @@ body.menu-open {
     padding-bottom: clamp(1.5rem, -0.0845rem + 6.7606vw, 6rem);
 }
 
+
 .container-1 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(6, auto);
@@ -78,6 +79,24 @@ body.menu-open {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, auto);
     padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
+}
+
+.container-4 {
+    width: 100%;
+}
+
+.container-5 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
+
+}
+
+.container-6 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, auto);
+    padding-top: clamp(6rem, 3.1831rem + 12.0188vw, 14rem);
+
 }
 
 .item {
@@ -177,6 +196,70 @@ body.menu-open {
     display: grid;
     justify-content: center;
 }
+
+.item-5-1 {
+    grid-row: 1 / 1;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: left;
+}
+
+.item-5-2 {
+    grid-row: 2 / 2;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: right;
+}
+
+.item-5-3 {
+    grid-row: 3 / 3;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: left;
+}
+
+.item-5-5 {
+    grid-row: 5 / 5;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: left;
+}
+
+.item-6-1 {
+    grid-row: 1 / 1;
+    grid-column: 1 / 3;
+    max-width: 1040px;
+    justify-self: center;
+}
+
+.item-6-2 {
+    grid-row: 2 / 2;
+    grid-column: 1 / 3;
+}
+
+.item-6-3 {
+    grid-row: 3 / 3;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: center;
+}
+
+.item-6-4 {
+
+        grid-row: 4 / 4;
+    grid-column: 1 / 3;
+    max-width: 800px;
+    justify-self: center;
+}
+
+.item-6-5 {
+    grid-row: 5 / 5;
+    grid-column: 1 / 3;
+    display: grid;
+    justify-content: center;
+}
+
+
 
 /* navbar styles */
 .navbar {
@@ -473,6 +556,25 @@ ul.suggested-links {
     color: var(--primary-color);
 }
 
+ol.suggested-links {
+    list-style-position: outside;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    font-family: "yorick-regular", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-transform: uppercase;
+    color: var(--primary-color);
+}
+
+ol.li {
+    list-style-position: inside;
+}
+
 
 
 
@@ -513,6 +615,122 @@ p {
     font-style: normal;
 }
 
+label {
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    line-height: 1.5;
+    font-style: normal;
+  margin-top: .4rem;
+
+}
+
+strong {
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    line-height: 1.5;
+    font-style: normal;
+}
+
+form {
+  max-width: 600px; /* or any width you want */
+  margin: 2rem auto; /* auto left & right centers it */
+  padding: 1.5rem;
+}
+
+
+
+form fieldset {
+  border: none;
+  padding: 0;
+}
+
+
+form legend {
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    line-height: 1.5;
+    font-style: normal;
+}
+
+
+
+
+
+/* Group spacing */
+.radio-group {
+
+}
+
+/* Custom radio container */
+.custom-radio {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    line-height: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    font-style: normal;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+/* Hide native radio but keep it accessible */
+.custom-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+}
+
+/* Custom square for unselected state: outline */
+.custom-radio span::before {
+  content: '';
+  display: inline-block;
+  width: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+  height: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+  background: var(--background-color);
+  box-shadow: inset 0 0 0 1px var(--primary-color); /* outline */
+  box-sizing: border-box;
+  margin-right: 0.5rem;
+  vertical-align: -2px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Custom square for selected state: solid fill */
+.custom-radio input[type="radio"]:checked + span::before {
+  background: var(--primary-color);
+  box-shadow: none;
+    border: none;
+}
+
+/* Hover effect: lighten outline */
+.custom-radio:hover span::before {
+  box-shadow: inset 0 0 0 1px var(--primary-color-hover);
+}
+
+/* Focus outline for accessibility */
+.custom-radio input[type="radio"]:focus + span::before {
+  outline: 1px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+
+
+#form-message {
+  color: var(--primary-color);
+  text-align: left;
+    font-family: "yorick-regular", serif;
+    letter-spacing: -0.02em;
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    line-height: 1.5;
+    font-style: normal;
+  margin-top: clamp(1rem, 0.75rem + 0.5vw, 1.5rem);
+  text-transform: uppercase;
+}
+
+
 h1 {
     color: var(--primary-color);
     font-size: clamp(0.8rem, 0.6415rem + 0.6761vw, 1.25rem);
@@ -527,6 +745,15 @@ h2 {
     font-style: normal;
     font-family: "business-blooming", serif;
     font-variation-settings: "opsz" 50;
+}
+
+h3 {
+    color: var(--primary-color);
+font-size: clamp(2rem, 1.4723rem + 2.2514vw, 3.5rem);
+    font-style: normal;
+    font-family: "business-blooming", serif;
+    font-variation-settings: "opsz" 32;
+    text-align: center;
 }
 
 .lowercase {
@@ -588,6 +815,89 @@ h2 {
     color: var(--quaternary-color);
 }
 
+
+
+
+
+.form-section {
+    
+}
+
+
+
+.name-section {
+margin-top: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);
+}
+
+.dietary-section {
+margin-top: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);
+}
+
+.attendance-section {
+margin-top: clamp(1.25rem, 0.9859rem + 1.1268vw, 2rem);
+}
+
+
+
+form input[type="text"],
+form textarea {
+
+font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    color: var(--primary-color);
+    line-height: 1.5;
+    font-style: normal;
+    font-family: "yorick-regular", serif;
+    letter-spacing: -0.02em;
+    padding: 0.48rem .8rem;
+    background-color: var(--background-color);
+    margin-top: clamp(0.24rem, 0.1837rem + 0.2402vw, 0.4rem);
+  border: 1px solid rgba(238, 65, 34, 0.48); /* your wedding theme color */
+  border-radius: 0px;
+  width: 100%; /* make them full width of parent */
+  box-sizing: border-box;
+}
+
+
+
+/* Hover state */
+form input[type="text"]:hover,
+form textarea:hover {
+  border-color: var(--primary-color-hover); /* your wedding orange */
+}
+
+
+
+
+form input[type="text"]:focus,
+form textarea:focus {
+  border-color: var(--primary-color); /* darker orange-red for focus */
+  outline: none; /* remove default browser blue outline */
+}
+
+form textarea {
+  resize: vertical; /* allows user to resize vertically if needed */
+  min-height: 100px; /* taller than inputs */
+}
+
+
+form textarea::placeholder {
+  color:rgba(238, 65, 34, 0.48);
+}
+
+
+.svg-wrapper {
+  grid-column: 1 / -1; /* span full width of the grid */
+}
+
+
+.svg-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
 .sup-container {
     font-size: clamp(0.6rem, 0.4810rem + 0.5078vw, 0.938rem); /* Overall superscript size */
     display: inline-flex; /* Allow fine control over individual characters */
@@ -639,6 +949,37 @@ button .arrow {
 button[type="button"]:hover .arrow {
     transform: translateX(clamp(0.25rem, 0.1972rem + 0.2254vw, 0.4rem)); /* Moves only the arrow */
 }
+
+
+
+button[type="submit"] {
+    padding: 12px 24px;
+    background: none;
+    color: var(--primary-color);
+    font-size: clamp(0.8rem, 0.7296rem + 0.3005vw, 1rem);
+    font-family: "yorick-bold", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 2px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer on hover */
+    transition: all 0.3s ease;  /* Smooth transition */
+    
+}
+
+button[type="submit"]:hover {
+    border: 1px solid var(--primary-color-hover);
+    color: var(--primary-color-hover);
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover .arrow {
+    transform: translateX(clamp(0.25rem, 0.1972rem + 0.2254vw, 0.4rem)); /* Moves only the arrow */
+}
+
+
 
 
 .my-image {
